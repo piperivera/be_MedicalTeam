@@ -21,8 +21,8 @@ from hospitalBackend import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/', views.userView.UsuarioListView.as_view()),
-    path('user/<int:pk>/', views.userView.UsuarioRetrieveUpdateDelteView.as_view()),
-    path('medico/', views.medicoView.MedicoListCreateView.as_view()),
-    path('medico/<int:pk>/', views.medicoView.MedicoRetrieveUpdateDelteView.as_view()),
+    path('user/', views.UsuarioListView.as_view()),
+    path('user/<int:pk>/', views.UsuarioRetrieveUpdateDelteView.as_view()),
+    path('medico/', views.MedicoListCreateView.as_view()),
+    path('medico/<int:pk>/', views.MedicoRetrieveUpdateDelteView.as_view()),
 ]
