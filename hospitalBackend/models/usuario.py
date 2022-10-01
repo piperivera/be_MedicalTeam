@@ -23,15 +23,15 @@ class UserManager(BaseUserManager):
         return user
 
 class Usuario(AbstractBaseUser, PermissionsMixin):
-    id = models.BigAutoField(primary_key=True)
-    rol = models.CharField('Rol', max_length=50)
-    nombre = models.CharField('Nombre', max_length=50)
-    apellido = models.CharField('Apallido',max_length=50)
-    celular = models.CharField('Celular', max_length=50)
-    email = models.EmailField('Email',max_length=50)
-    direccion = models.CharField('Direccion', max_length=50)
-    username = models.CharField('Username',max_length=50, unique=True)
-    password = models.CharField('Password',max_length=50)
+    id=models.BigAutoField(primary_key=True)
+    rol=models.CharField(max_length=50)
+    nombre=models.CharField(max_length=50)
+    apellido=models.CharField(max_length=50)
+    celular=models.CharField(max_length=50)
+    e_mail=models.EmailField(max_length=50)
+    direccion=models.CharField( max_length=50)
+    username=models.CharField(max_length=50, unique=True)
+    password=models.CharField(max_length=256)
 
     def save(self, **kwargs):
         some_salt = 'mMUj0DrIK6vgtdIYepkIxN'
